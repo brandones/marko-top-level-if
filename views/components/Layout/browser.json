@@ -1,0 +1,7 @@
+{
+  "dependencies": [
+    "popper.js/dist/umd/popper.min.js",
+    "jquery/dist/jquery.slim.min.js",
+    "bootstrap/dist/js/bootstrap.min.js"
+  ]
+}

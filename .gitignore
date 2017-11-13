@@ -1,0 +1,10 @@
+*.marko.js
+npm-debug.log
+node_modules/
+.cache/
+static/views/
+static/views*
+static/components/
+static/components*
+static/
+test/static/*

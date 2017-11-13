@@ -1,0 +1,40 @@
+{
+  "name": "marko-if-err",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "LOCALHOST_SERVICES=1 browser-refresh index.js",
+    "test": "LOCALHOST_SERVICES=1 NODE_ENV=testing mocha",
+    "test-watch": "LOCALHOST_SERVICES=1 NODE_ENV=testing nodemon -q node_modules/.bin/mocha --reporter min"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Brandon Istenes",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "4.0.0-beta",
+    "browser-refresh-taglib": "^1.0.3",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.9.4",
+    "express-request-language": "^1.1.14",
+    "isomorphic-fetch": "^2.2.1",
+    "jquery": "^3.2.1",
+    "lasso": "^2.11.16",
+    "lasso-marko": "^2.3.1",
+    "leaflet": "^1.2.0",
+    "marko": "^4.5.6",
+    "popper.js": "^1.12.6",
+    "ramda": "^0.25.0",
+    "request": "^2.82.0",
+    "serve-static": "^1.6.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "browser-refresh": "^1.7.2",
+    "mocha": "^4.0.1",
+    "supertest": "^3.0.0",
+    "unexpected": "^10.36.0"
+  }
+}

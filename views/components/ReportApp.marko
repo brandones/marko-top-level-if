@@ -1,0 +1,15 @@
+class {
+  onInput(input, out) {
+    this.state = { flash: undefined }
+  }
+
+  handleFlash(type, message) {
+    this.state.flash = { type, message }
+  }
+}
+
+<div>
+  <Flash flash=state.flash />
+  <a.d-lg-none href="/">Home</a>
+  <ReportForm handleFlash=component.handleFlash.bind(component)/>
+</div>

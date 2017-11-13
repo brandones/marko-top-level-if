@@ -1,0 +1,39 @@
+import R from 'ramda'
+import { apiCall } from '../../util'
+
+static const endpoint = '/report'
+
+class {
+  onInput(input, out) {
+    this.config = out.global.config
+  }
+
+
+  handleFormSubmit(event) {
+    console.log('handleFormSubmit')
+    const data = this.getFromForm(['name', 'text', 'lat', 'lon'])
+    console.log('posting', data)
+    apiCall(this.config.api.url + endpoint, 'POST', data)
+    .then(res => {
+      this.input.handleFlash('primary', 'Your report has been submitted')
+    })
+    .catch(err => {
+      this.input.handleFlash('danger', 'Something went wrong while creating your report')
+    })
+    event.preventDefault()
+  }
+
+  /** maps a list of input keys to their values in the form */
+  getFromForm(names) {
+    return R.zipObj(names, names.map(n => this.getEl(n).value))
+  }
+
+}
+
+<div>
+  <form action=endpoint method='POST'>
+    <input key='name' type='text' name='name'><br>
+    <input key='text' type='text' name='text'><br>
+    <input on-click('handleFormSubmit') type='submit' value='Submit'>
+  </form>
+</div>

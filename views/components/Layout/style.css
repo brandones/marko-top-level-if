@@ -1,0 +1,131 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  color: #333;
+}
+
+a {
+  color: #26a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav.menu a {
+  display: inline-block;
+  padding: 0.5em 1em;
+}
+
+img.logo {
+  width: 160px;
+  height: 88px;
+  margin-bottom: 1em;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 300;
+  margin: 0;
+}
+
+h2 {
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-size: 1em;
+}
+
+p {
+  line-height: 1.6;
+}
+
+@media (max-width: 991px) {
+
+  header {
+    display: none;
+  }
+
+  .container {
+    width: inherit;
+    margin: 0;
+  }
+
+  .map {
+    height: 100%;
+    width: 100%;
+    background: #ddd;
+  }
+
+  .map-container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
+
+  .content {
+    padding: 0;
+  }
+
+  .mobile-modal {
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    padding: 1em 1em;
+    z-index: 2000;
+  }
+
+  .mobile-modal .card {
+    height: 100%;
+  }
+
+  .report-button {
+    position: fixed;
+    bottom: 1em;
+    /* https://stackoverflow.com/a/10638226/1464495 */
+    width: 75%;
+    left: 50%;
+    margin-left: -37.5%;
+  }
+
+}
+
+@media (min-width: 992px) {
+
+  header {
+    display: inherit;
+  }
+
+  .content {
+    padding-top: 20px;
+  }
+
+  .map {
+    height: 400px;
+    width: 600px;
+    background: #ddd;
+  }
+
+  .report-button {
+    position: relative;
+    bottom: inherit;
+  }
+}
